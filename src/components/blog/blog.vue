@@ -21,7 +21,9 @@
             <a href="https://www.runoob.com/" target="_blank">学习</a>
           </el-menu-item>
         </el-menu>
-        <el-input placeholder="请输入内容" prefix-icon="el-icon-search" class="inputSear"></el-input>
+        <el-input placeholder="请输入内容" v-model="input4" class="inputSear">
+          <i slot="prefix" class="el-input__icon el-icon-search"></i>
+        </el-input>
       </div>
     </div>
     <div class="banner">
@@ -41,9 +43,66 @@
             如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
           </div>
         </div>
-        <div class="photos">
+        <!-- <div class="photos">
           <div class="col" v-for="(col,idx) in cols" :key="idx">
             <img :src="photo" class="photo" v-for="photo in col" :key="photo" />
+          </div>
+        </div>-->
+        <div class="boxs">
+          <div class="box">
+            <img src="../../../static/images/p1.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p2.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p3.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p3.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p1.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p2.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p2.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p3.jpg" alt />
+          </div>
+          <div class="box">
+            <img src="../../../static/images/p1.jpg" alt />
+          </div>
+        </div>
+        <div class="article">
+          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="des">
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+          </div>
+        </div>
+        <div class="article">
+          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="des">
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+          </div>
+        </div>
+        <div class="article">
+          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="des">
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+          </div>
+        </div>
+        <div class="article">
+          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="des">
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
+            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
           </div>
         </div>
       </div>
@@ -75,7 +134,7 @@
   </div>
 </template>
 <script>
-import Mock from 'mockjs'; //es6语法引入mock模块
+import Mock from "mockjs"; //es6语法引入mock模块
 export default {
   data() {
     return {
@@ -115,16 +174,17 @@ export default {
           link: "http://es6.ruanyifeng.com/",
           color: "grey"
         }
-      ]
+      ],
+      input4: ""
     };
   },
   created() {
-    this.photos = Array.from({length: 20}).map((v,i) => {
-      let height = this.rnd(100, 300)
-      this.photoHeights.push(height + 10)
-      return Mock.Random.dataImage('225x' + height, i)
-    })
-    this.computeColumns()
+    this.photos = Array.from({ length: 20 }).map((v, i) => {
+      let height = this.rnd(100, 300);
+      this.photoHeights.push(height + 10);
+      return Mock.Random.dataImage("225x" + height, i);
+    });
+    this.computeColumns();
   },
   watch: {
     colCount() {
@@ -338,9 +398,34 @@ export default {
 .col {
   /* width: 50%; */
 }
+.col img {
+  width: 100%;
+}
 .photo {
   display: block;
   margin: 5px;
   object-fit: none;
+}
+.boxs {
+  width: 100%;
+  column-count: 3;
+  column-gap: 10px;
+  margin-top: 20px;
+}
+.box {
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border: 1px gainsboro solid;
+}
+.box:hover{
+    border: 1px #f56c6c solid;
+}
+.box img {
+  width: 100%;
+}
+.article {
+  margin-bottom: 20px;
+  border: 1px #e6e6e6 solid;
+  padding: 0 20px 20px;
 }
 </style>
