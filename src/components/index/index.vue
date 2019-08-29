@@ -37,7 +37,7 @@
                 <div class="sc-left">
                   <h2 :class="'animated'+(cindex==1?' fadeInLeft':'')">知识积累与总结</h2>
                   <p :class="'animated'+(cindex==1?' fadeInRight':'')">Web前端技术相关</p>
-                  <p :class="'animated'+(cindex==1?' fadeInRight':'')">HTML、Javascript、CSS等技术框架使用项目总结</p>
+                  <p :class="'animated'+(cindex==1?' fadeInRight':'')">HTML、Javascript、CSS等技术使用项目总结</p>
                   <router-link :to="{path:'/blog'}">
                   <el-button type="danger" round :class="'animated'+(cindex==1?' bounceInUp':'')">查看详情</el-button>
                   </router-link>
