@@ -3,7 +3,9 @@
     <div class="el-menu-indiv">
       <div class="yiq-div flexbox fl-center">
         <div class="logo">
-          <img src="../../../static/images/logo-reddit.png" alt="logo" />
+          <router-link :to="{path:'/'}">
+            <img src="../../../static/images/logo-reddit.png" alt="logo" />
+          </router-link>
         </div>
         <el-menu
           :default-active="activeIndex2"
@@ -49,61 +51,130 @@
           </div>
         </div>-->
         <div class="boxs">
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p1.jpg" alt />
+            <div class="black-m">
+              <h2>雷哥GMAT在线</h2>
+              <p>雷哥GMAT，互联网GMAT一站式在线学习平台。提供包含GMAT在线做题、 在线模考、在线测评、在线答疑、在线学习计划定制、录播视频课程、在线直播课程、免费公开课等一系列在线GMAT学习服务。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p2.jpg" alt />
+            <div class="black-m mt">
+              <h2>谁更准 小程序</h2>
+              <p>按准6秒送现金红包、可邀请好友抢红包、余额可提现。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p3.jpg" alt />
+            <div class="black-m mt">
+              <h2>雷哥留学网</h2>
+              <p>申请留学名校、查询留学排名、录取几率测评、顾问推荐等。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p3.jpg" alt />
+            <div class="black-m mt">
+              <h2>礼先森 小程序</h2>
+              <p>礼先森是一个社交化赠礼平台，可以通过微信赠送礼物，随时随地传递心意。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p1.jpg" alt />
+            <div class="black-m">
+              <h2>雷哥托福在线</h2>
+              <p>
+                雷哥网托福，互联网在线一站式学习平台,提供完善的托福在线学习服务
+                包括托福TPO在线模考、听说读写分科练习，托福在线直播课，托福高分分享等的备考服务
+              </p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p2.jpg" alt />
+            <div class="black-m mt">
+              <h2>yoyo头像 小程序</h2>
+              <p>头像加v、头像加字、明星头像、拼图、切图等。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p2.jpg" alt />
+            <div class="black-m mt">
+              <h2>雷哥网</h2>
+              <p>单词、电台、公开课、VIP会员、院校库等。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p3.jpg" alt />
+              <div class="black-m mt">
+              <h2>投票圈 小程序</h2>
+              <p>用户可发布各种需要投票信息，邀请好友投票。</p>
+            </div>
           </div>
-          <div class="box">
+          <div class="box animated zoomIn">
             <img src="../../../static/images/p1.jpg" alt />
+            <div class="black-m">
+              <h2>雷哥网others</h2>
+              <p>雷哥GMAT Wap端</p>
+              <p>雷哥托福 Wap端</p>
+              <p>雷哥留学录取几率测评小程序</p>
+            </div>
           </div>
         </div>
         <div class="article">
-          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="title">
+            <a
+              href="https://juejin.im/post/5d6866936fb9a06ada54c642?utm_source=gold_browser_extension"
+              target="_blank"
+            >前20个常用字符串方法及使用方式</a>
+          </div>
           <div class="des">
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+            charAt(x)、
+            charCodeAt(x)、
+            concat(v1,v2..)、
+            fromCharcode(c1,c2)、
+            indexOf(substr, [start])、
+            lastIndexOf(substr, [start])、
+            match(regexp)、
+            replace(regexp/substr, replacetext)、
+            search(regexp)、
+            slice(start, [end])、
+            split(delimiter, [limit])、
+            substr(start, [length])、
+            substring(from, [to])、
+            toLowerCase()、
+            toUpperCase()、
+            includes()、
+            endsWith()、
+            repeat()、
+            valueOf()、
+            trim()
           </div>
         </div>
         <div class="article">
-          <div class="title">雷哥网GMAT项目总结</div>
+          <div class="title">
+            <a
+              href="https://juejin.im/post/5d4d0ec651882549594e7293?utm_source=gold_browser_extension"
+              target="_blank"
+            >灵活运用CSS开发技巧</a>
+          </div>
           <div class="des">
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+            Layout Skill：布局技巧、
+            Behavior Skill：行为技巧、
+            Color Skill：色彩技巧、
+            Figure Skill：图形技巧、
+            Component Skill：组件技巧
           </div>
         </div>
         <div class="article">
-          <div class="title">雷哥网GMAT项目总结</div>
-          <div class="des">
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
+          <div class="title">
+            <a
+              href="https://juejin.im/post/5d66b019f265da03a715e5d7?utm_source=gold_browser_extension"
+              target="_blank"
+            >Array.from() 五个超好用的用途</a>
           </div>
-        </div>
-        <div class="article">
-          <div class="title">雷哥网GMAT项目总结</div>
-          <div class="des">
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；
-            如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别；如果没有自己的原则，那跟狗有什么区别。
-          </div>
+          <div
+            class="des"
+          >JavaScript 中有一个这样的函数: Array.from：允许在 JavaScript 集合(如: 数组、类数组对象、或者是字符串、map 、set 等可迭代对象) 上进行有用的转换。</div>
         </div>
       </div>
       <div class="rightside">
@@ -264,6 +335,7 @@ export default {
 }
 .el-menu-indiv {
   width: 100%;
+  min-width: 1000px;
   background: rgb(84, 92, 100);
 }
 .yiq-div {
@@ -308,6 +380,7 @@ export default {
 .footer {
   width: 100%;
   height: 40px;
+  min-width: 1000px;
   line-height: 40px;
   background: rgb(84, 92, 100);
   color: white;
@@ -416,16 +489,53 @@ export default {
   padding: 10px;
   margin: 0 0 10px 0;
   border: 1px gainsboro solid;
+  position: relative;
 }
-.box:hover{
-    border: 1px #f56c6c solid;
+.box:hover {
+  border: 1px #f56c6c solid;
+  color: #f56c6c;
+}
+.box:hover h2 {
+  color: #f56c6c;
 }
 .box img {
   width: 100%;
+  /* -webkit-filter: blur(2px); 
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);    
+  filter: blur(2px); */
 }
 .article {
   margin-bottom: 20px;
   border: 1px #e6e6e6 solid;
   padding: 0 20px 20px;
+}
+.article a {
+  color: #333;
+}
+.article a:hover {
+  color: #f56c6c;
+}
+.black-m {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+.black-m h2 {
+  margin: 50px 0 0;
+  color: #333;
+  font-size: 18px;
+}
+.black-m.mt h2 {
+  margin: 20px 0 0;
+}
+.black-m p {
+  margin: 20px;
+  font-size: 14px;
+  color: #666;
 }
 </style>

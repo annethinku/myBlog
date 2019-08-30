@@ -1,10 +1,6 @@
 <template>
   <div>
-    <div class="b-head">
-      <div class="logo">
-        <img src="../../../static/images/logo-reddit.png" alt="logo" />
-      </div>
-    </div>
+    <my-head data-classn="true"></my-head>
     <div class="b-body" ref="bodys">
       <el-carousel
         :interval="5000"
@@ -21,9 +17,15 @@
               <div class="flexbox">
                 <div class="sc-left">
                   <h2 :class="'animated'+(cindex==0?' fadeInLeft':'')">曾小蓉</h2>
-                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">爱追剧、爱王者、爱生活</p>
+                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">爱追剧、爱王者、爱Money</p>
                   <p :class="'animated'+(cindex==0?' fadeInRight':'')">Web前端开发攻城狮 · ‘十分善良’的好人</p>
-                  <el-button type="danger" round :class="'animated'+(cindex==0?' bounceInUp':'')">查看详情</el-button>
+                  <router-link :to="{path:'/description'}">
+                    <el-button
+                      type="danger"
+                      round
+                      :class="'animated'+(cindex==0?' bounceInUp':'')"
+                    >查看详情</el-button>
+                  </router-link>
                 </div>
                 <div :class="'sc-right animated'+(cindex==0?' flipInX':'')">
                   <img src="../../../static/images/person.jpg" alt="图片" />
@@ -31,7 +33,7 @@
               </div>
             </div>
           </div>
-             <div class="showContent" v-if="cindex==1">
+          <div class="showContent" v-if="cindex==1">
             <div class="outFlex">
               <div class="flexbox">
                 <div class="sc-left">
@@ -39,8 +41,30 @@
                   <p :class="'animated'+(cindex==1?' fadeInRight':'')">Web前端技术相关</p>
                   <p :class="'animated'+(cindex==1?' fadeInRight':'')">HTML、Javascript、CSS等技术使用项目总结</p>
                   <router-link :to="{path:'/blog'}">
-                  <el-button type="danger" round :class="'animated'+(cindex==1?' bounceInUp':'')">查看详情</el-button>
+                    <el-button
+                      type="danger"
+                      round
+                      :class="'animated'+(cindex==1?' bounceInUp':'')"
+                    >查看详情</el-button>
                   </router-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="showContent" v-if="cindex==2">
+            <div class="outFlex">
+              <div class="flexbox">
+                <div class="sc-left">
+                  <h2 :class="'animated'+(cindex==2?' fadeInLeft':'')">圈子等待扩充</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+               <div class="showContent" v-if="cindex==3">
+            <div class="outFlex">
+              <div class="flexbox">
+                <div class="sc-left">
+                  <h2 :class="'animated'+(cindex==3?' fadeInLeft':'')">有钱旅行再说</h2>
                 </div>
               </div>
             </div>
@@ -68,12 +92,12 @@
         </div>
       </div>
     </div>
-    <div class="b-foot">
-      <div class="cy">Copyright © 2019An Rights Reserved.</div>
-    </div>
+    <my-foot></my-foot>
   </div>
 </template>
 <script>
+import myHead from "../myhead/myhead";
+import myFoot from "../myfoot/myfoot";
 export default {
   data() {
     return {
@@ -83,6 +107,10 @@ export default {
   },
   mounted() {
     this.height = this.$refs.bodys.offsetHeight;
+  },
+  components: {
+    "my-head": myHead,
+    "my-foot": myFoot
   },
   methods: {
     bannerChange(index) {
@@ -96,34 +124,6 @@ export default {
 };
 </script>
 <style scoped>
-.b-head {
-  width: 100%;
-  padding: 10px 0;
-  background: #161618;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.logo {
-  padding-left: 50px;
-}
-.logo img {
-  width: 50px;
-  height: 50px;
-}
-.b-foot {
-  width: 100%;
-  padding: 15px 0;
-  background: #161618;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-.b-foot .cy {
-  color: white;
-  padding: 0 50px 0 0;
-  text-align: right;
-}
 .b-body {
   width: 100%;
   height: auto;
