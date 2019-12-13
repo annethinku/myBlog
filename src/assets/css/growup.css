@@ -1,0 +1,612 @@
+.block {
+    width: 1000px;
+    margin: 40px auto 0;
+  }
+  .wp {
+    width: 200px;
+    height: 200px;
+    border: 1px red solid;
+    position: relative;
+    /* text-align: center;
+    line-height: 200px; */
+  }
+  .m_box {
+    background: goldenrod;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* display: inline-block;
+    vertical-align: middle;
+    line-height: initial;
+    text-align: left; 后两句修正文字*/
+  }
+  .size {
+    width: 100px;
+    height: 100px;
+  }
+  .before {
+    padding: 1em;
+    background: white;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    margin: 20px;
+    border: 1px #eee solid;
+  }
+  .before:hover {
+    box-shadow: 0 0 10px #eee;
+  }
+  .after {
+    padding: 1em;
+    background: white;
+    margin: 20px;
+    position: relative;
+    border: 1px #eee solid;
+  }
+  .after::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    box-shadow: 0 0 10px #eee;
+    opacity: 0;
+    will-change: opacity; /**增强页面渲染性能**/
+  }
+  .after:hover:before {
+    opacity: 1;
+  }
+  /* 面包屑样式 */
+  .mbx ul li {
+    display: inline;
+    list-style: none;
+  }
+  /* 选择器+表示紧挨着后一个兄弟元素  ~选择器表示此元素后的所有该兄弟节点 */
+  .mbx ul li + li::before {
+    content: "/\00a0";
+  }
+  .mbx ul li a {
+    text-decoration: none;
+  }
+  /* 按钮填充和边界浮动动画 */
+  .mymove {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    margin: 20px;
+    padding: 50px 20px;
+    background: gray;
+    position: relative;
+    z-index: 0;
+  }
+  .box {
+    position: relative;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    color: #f27059;
+  }
+  .item {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s all ease;
+  }
+  .one:before,
+  .one:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #f27059;
+    transition: 0.4s all ease;
+  }
+  .one:before {
+    top: 0;
+  }
+  .one:after {
+    bottom: 0;
+  }
+  .one .item:before,
+  .one .item:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background: #f27059;
+    transition: 0.4s all ease;
+    z-index: -1;
+  }
+  .one .item:before {
+    left: 0;
+  }
+  .one .item:after {
+    right: 0;
+  }
+  .one:hover:before {
+    transform: translateY(-10px);
+  }
+  .one:hover:after {
+    transform: translateY(10px);
+  }
+  .one:hover .item {
+    color: white;
+  }
+  .one:hover .item:before,
+  .one:hover .item:after {
+    width: 100%;
+    transition: 0.4s all ease;
+  }
+  .two {
+    box-sizing: border-box;
+    border: 2px solid #f27059;
+    position: relative;
+  }
+  .two:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 50px;
+    transition: 0.4s all ease;
+    background: #f27059;
+    left: 0;
+    z-index: -1;
+  }
+  .two:hover {
+    color: white;
+  }
+  .two:hover:before {
+    width: 100%;
+    transition: 0.4s all ease;
+  }
+  
+  .mm_box {
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px goldenrod solid;
+    color: goldenrod;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+  }
+  .mm_in {
+    position: relative;
+  }
+  .mm_in::before {
+    width: 0;
+    height: 100%;
+    content: "";
+    background: goldenrod;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s ease-out;
+  }
+  .mm_box:hover {
+    color: white;
+  }
+  .mm_box:hover .mm_in::before {
+    width: 100%;
+  }
+  
+  .mm_btns {
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    background: goldenrod;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .mm_btns::before {
+    content: "→";
+    transition: all 0.4s ease-out;
+    position: absolute;
+    left: -50px;
+  }
+  .mm_btns:hover::before {
+    left: 40px;
+  }
+  .mm_btns span {
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) */
+    display: inline-block;
+    transition: all 0.4s ease-out;
+  }
+  .mm_btns:hover span {
+    /* left: 100%; */
+    transform: translateX(300%);
+  }
+  
+  .mm_jiantou {
+    width: 200px;
+    height: 80px;
+    background: #eee;
+    margin: 0 0 0 20px;
+  }
+  .mm_j2 {
+    width: 100px;
+    height: 80px;
+    background: #f27059;
+    position: relative;
+  }
+  .mm_j2::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px transparent solid;
+    border-left-color: #f27059;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -5px;
+  }
+  .myskey {
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    background: #f27059;
+    text-align: center;
+    position: relative;
+    margin-left: 20px;
+  }
+  .myskey::after,
+  .myskey::before {
+    content: "";
+    height: 20%;
+    position: absolute;
+    background: #f27059;
+    left: 0;
+    right: 0;
+  }
+  .myskey::after {
+    bottom: 0;
+    transform: skewY(2deg);
+  }
+  .myskey::before {
+    top: 0;
+    transform: skewY(-2deg);
+  }
+  .mytool {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    text-align: center;
+    margin: 80px 50px 10px;
+    position: relative;
+  }
+  .mytool:hover {
+    background: #f27059;
+    color: white;
+  }
+  .mytool::before {
+    width: 200px;
+    content: "my box meet you";
+    background-color: #f27059;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    top: -55px;
+    left: -50px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .mytool:hover::before {
+    opacity: 1;
+  }
+  .mytool::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 10px transparent solid;
+    border-top-color: #f27059;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .mytool:hover::after {
+    opacity: 1;
+  }
+  
+  /* 自动打字效果 */
+  .tagline,
+  .tagline-skill {
+    height: 80px;
+  }
+  .tagline {
+    font-family: "Fira Mono", monospace;
+    overflow: hidden;
+    background-color: #2a2a28;
+    color: #fff;
+  }
+  .tagline-skill {
+    position: relative;
+    font-size: 1.5em;
+    padding-top: 0.75em;
+    -webkit-animation: animatetotop 6s steps(3) infinite;
+    animation: animatetotop 6s steps(3) infinite;
+  }
+  .tagline-skill_inner,
+  .tagline-skill-overlay {
+    display: inline-block;
+  }
+  .tagline-skill_inner {
+    position: relative;
+    line-height: 1;
+  }
+  .tagline-skill_inner:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    border-left: 1px solid #fff;
+    background-color: #2a2a28;
+    -webkit-animation: animatetoright 1s steps(10) infinite alternate;
+    animation: animatetoright 1s steps(10) infinite alternate;
+  }
+  @-webkit-keyframes animatetoright {
+    0% {
+      left: 0;
+      margin-right: auto;
+    }
+    100% {
+      left: 100%;
+      margin-left: 0.6em;
+      margin-right: -0.6em;
+    }
+  }
+  @keyframes animatetoright {
+    0% {
+      left: 0;
+      margin-right: auto;
+    }
+    100% {
+      left: 100%;
+      margin-left: 0.6em;
+      margin-right: -0.6em;
+    }
+  }
+  @-webkit-keyframes animatetotop {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -240px;
+    }
+  }
+  @keyframes animatetotop {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: -240px;
+    }
+  }
+  
+  .tagline,
+  .tagline-skill {
+    width: 192px;
+    display: block;
+    font-weight: 400;
+  }
+  /* 文章水印背景 */
+  .my_content {
+    position: relative;
+  }
+  .my_content h1::after {
+    content: "2019/9/25";
+    font-size: 2.5em;
+    color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+  /* 页码摘要 */
+  .pageZY ul {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    list-style: none;
+  }
+  .pageZY li {
+    margin: 0.5em 0;
+  }
+  .pageZY a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    text-decoration: none;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    color: black;
+  }
+  .pageZY a::before {
+    height: 0.1em;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    background: left bottom/contain repeat-x url(http://img4.imgtn.bdimg.com/it/u=3518603959,4721019&fm=26&gp=0.jpg);
+    content: "";
+  }
+  .pageZY a::after {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    content: "p." attr(data-page);
+  }
+  .pageZY a:hover,
+  .pageZY a:focus {
+    color: black;
+  }
+  .d_btn {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px #e6e6e6 solid;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .d_btn:hover {
+    background: burlywood;
+    color: white;
+  }
+  .d_btn ul {
+    width: 100%;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: burlywood;
+    color: white;
+    transform-origin: 0 0;
+    transform: scaleY(0);
+    transition: all 0.3s;
+  }
+  .d_btn:hover ul {
+    transform: scaleY(1);
+  }
+  
+
+  .logo-box{
+    width: 600px;
+    margin: 100px auto;
+    font-size: 0;
+    position: relative;
+}
+.logo-box div{
+    display: inline-block;
+}
+.logo-box .logo-text{
+    margin-left: 10px;
+}
+.logo-box .logo1{
+    animation: logo1 1s ease-in 2s;
+    animation-fill-mode:backwards;
+}
+.logo-box .logo-text{
+    animation: logoText 1s ease-in 3s;
+    animation-fill-mode:backwards;
+}
+.logo-box .logo2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    animation: logo2-middle 2s ease-in;
+}
+.logo-box .logo2 img{
+    animation: logo2-line 2s linear;
+}
+@keyframes logo1 {
+    0%{
+        transform:rotate(180deg);
+        opacity: 0;
+    }
+    100%{
+        transform:rotate(0deg);
+        opacity: 1;
+    }
+}
+@keyframes logoText {
+    0%{
+        transform:translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes logo2-line {
+    0% { transform: translateX(200px)}
+    25% { transform: translateX(150px)}
+    50% { transform: translateX(100px)}
+    75% { transform: translateX(50px)}
+    100% { transform: translateX(0); }
+}
+
+@keyframes logo2-middle {
+    0% { transform: translateY(0);     }
+    25% { transform: translateY(-100px);     }
+    50% { transform: translateY(0);     }
+    75% { transform: translateY(-50px);     }
+    100% { transform: translateY(0); }
+}
+.mymove2{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    will-change: animation;
+    animation: logo2-line 2s ease-out infinite;
+}
+.mymove22{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    will-change: animation;
+    animation: logo2-middle 2s ease-out infinite;
+}
+
+.myrotate{
+  width: 100px;
+  height: 100px;
+  background: gold;
+  transform: rotate3d(10,10,10,90deg);
+}
+
+.mybelow{
+   padding: 0 0 100px;
+}
+.mybelow img{
+  width: 200px;
+  /* -webkit-box-reflect: right;below下 right右 left左 above上 */
+  -webkit-box-reflect: below 0 linear-gradient(transparent, white);/*下倒影渐变*/
+  /* filter: invert(1);滤镜 */
+  mix-blend-mode: multiply;
+}
