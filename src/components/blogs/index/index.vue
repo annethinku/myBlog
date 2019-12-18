@@ -20,9 +20,10 @@
           <el-menu-item index="/bindex">首页</el-menu-item>
           <el-menu-item index="/about">每日3题</el-menu-item>
           <el-menu-item index="/growup">每日1题</el-menu-item>
-          <el-menu-item>
+          <el-menu-item index="/result">总结</el-menu-item>
+          <!-- <el-menu-item>
             <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
-          </el-menu-item>
+          </el-menu-item> -->
         </el-menu>
         <el-input placeholder="请输入内容" v-model="input4" class="inputSear">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>

@@ -1,36 +1,40 @@
 <template>
   <div class="about">
-
-
-    <div class="mylibox">
+    <el-collapse v-model="activeName" accordion>
+      <el-collapse-item title="使用递归算法生成一个长度为5 值2-32之间的不重复的随机数 【不能使用for/while】" name="1">
+        <pre>
+          function buildFive(arr,min,max,len){
+            let num=Math.floor(Math.random()*((max-min+1)+min));
+            if(!arr.includes(num)){arr.push(num)}
+            return arr.length===len?arr:buildFive(arr,min,max,len);
+          }
+        console.log(buildFive([],2,32,5));
+        </pre>
+      </el-collapse-item>
+      <el-collapse-item title="去掉字符串中所有的空格" name="2">
+        console.log('a b c des'.replace(/\s*/g,''))
+        <br />
+        console.log('a b c des'.split(" ").join(''))
+      </el-collapse-item>
+      <el-collapse-item title="页面导入样式时，使用link和@import有什么区别" name="3">
+        <div>link是html标签，@import是css提供的</div>
+        <div>link引入样式页面加载时同时加载，@import引入的样式需要等页面加载完后再加载</div>
+        <div>link没有兼容性问题，@import不兼容ie5以下</div>
+        <div>link可以通过js操作DOM动态引入样式表，而@import不可以</div>
+      </el-collapse-item>
+      <el-collapse-item title="圣杯布局和双飞翼布局的理解和区别" name="4">
+        <div>圣杯布局和双飞翼布局解决的问题是一样的，就是两边顶宽中间自适应的布局，中间栏要放在文档流前面以优先渲染</div>
+        <div>区别：圣杯为了中间内容不被遮挡 将中间div设置padding-left/right配合;双飞翼中间内容不被遮挡，创建子div设置margin-left/right</div>
+      </el-collapse-item>
+    </el-collapse>
+        <div class="mylibox">
       <ul>
-        <li v-for="(item,index) in arr" :key="index" :class="item.class">
-            我是第{{index+1}}个li
-        </li>
+        <li v-for="(item,index) in arr" :key="index" :class="item.class">我是第{{index+1}}个li</li>
       </ul>
     </div>
 
-<div style="clear:both;"></div>
+    <div style="clear:both;"></div>
 
-    <el-collapse v-model="activeName" accordion>
-      <el-collapse-item title="一致性 Consistency" name="1">
-        <div>与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；</div>
-        <div>在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。</div>
-      </el-collapse-item>
-      <el-collapse-item title="反馈 Feedback" name="2">
-        <div>控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；</div>
-        <div>页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。</div>
-      </el-collapse-item>
-      <el-collapse-item title="效率 Efficiency" name="3">
-        <div>简化流程：设计简洁直观的操作流程；</div>
-        <div>清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；</div>
-        <div>帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。</div>
-      </el-collapse-item>
-      <el-collapse-item title="可控 Controllability" name="4">
-        <div>用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；</div>
-        <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
-      </el-collapse-item>
-    </el-collapse>
   </div>
 </template>
 <script>
@@ -38,38 +42,63 @@ export default {
   data() {
     return {
       activeName: "1",
-      arr:[{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},{id:1},]
+      arr: [
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 },
+        { id: 1 }
+      ]
     };
   },
-  mounted(){
-   let that=this;
-    that.arr.forEach(function(item,index){
-      item.class=Math.floor(index/4) % 2==1?'fright':''
-        that.$set(that.arr,index,item);
-    })
+  mounted() {
+    let that = this;
+    that.arr.forEach(function(item, index) {
+      item.class = Math.floor(index / 4) % 2 == 1 ? "fright" : "";
+      that.$set(that.arr, index, item);
+    });
     // es6一维数组去重
-    let a=[1,2,2,6,6,89,54];
+    let a = [1, 2, 2, 6, 6, 89, 54];
     console.log(Array.from(new Set(a)));
     // es6数组过滤
-    let b=[{name:'kele',val:'巴拉巴拉'},{name:'kele',val:'崩虾卡拉卡'},{name:'aa',val:'dfsf'}];
-    let ab=b.filter(item=>item.name=='kele')
-    console.log(ab)
-
+    let b = [
+      { name: "kele", val: "巴拉巴拉" },
+      { name: "kele", val: "崩虾卡拉卡" },
+      { name: "aa", val: "dfsf" }
+    ];
+    let ab = b.filter(item => item.name == "kele");
+    console.log(ab);
   },
-  methods:{
-
-  }
+  methods: {}
 };
 </script>
 <style scoped>
-.about{
-    width: 1000px;
-    margin: 0 auto;
+.about {
+  width: 1000px;
+  margin: 0 auto;
 }
-.mylibox ul{
-
+.mylibox ul {
 }
-.mylibox ul li{
+.mylibox ul li {
   width: 23%;
   height: 100px;
   background: gainsboro;
@@ -79,7 +108,7 @@ export default {
   text-align: center;
   float: left;
 }
-.mylibox ul li.fright{
-  float:right;
+.mylibox ul li.fright {
+  float: right;
 }
 </style>

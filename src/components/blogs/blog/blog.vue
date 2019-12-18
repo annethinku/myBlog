@@ -316,9 +316,10 @@ export default {
     };
   },
   mounted(){
-    this.axios.get("/posts").then(res => {
-      console.log(res);
-    });
+ var Mock = require('mockjs');
+var mail1 = Mock.mock('@email'); 
+var mail2 = Mock.Random.email();
+Mock.Random.image('200x100', '#ffcc33', '#FFF', 'png', '!')
   },
   created() {
     

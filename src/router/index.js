@@ -42,6 +42,11 @@ export default new Router({
           path: '/about',
           name: 'about',
           component: _import('blogs/about/about'),
+        },
+        {
+          path: '/result',
+          name: 'result',
+          component: _import('blogs/result/result'),
         }
       ]
     },
