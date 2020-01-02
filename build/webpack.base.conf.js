@@ -23,13 +23,18 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.styl'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
   },
   module: {
+    loaders: [
+      {
+      test: /\.styl$/,
+      loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+    }],
     rules: [
       {
         test: /\.vue$/,

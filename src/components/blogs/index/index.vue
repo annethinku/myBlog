@@ -19,7 +19,7 @@
         >
           <el-menu-item index="/bindex">首页</el-menu-item>
           <el-menu-item index="/about">每日3题</el-menu-item>
-          <el-menu-item index="/growup">每日1题</el-menu-item>
+          <el-menu-item index="/growup">不可思议的CSS</el-menu-item>
           <el-menu-item index="/result">总结</el-menu-item>
           <!-- <el-menu-item>
             <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>

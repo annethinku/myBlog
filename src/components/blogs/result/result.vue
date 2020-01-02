@@ -329,11 +329,22 @@ Mouse.prototype.constructor=Mouse;
           <div class="re-title">
           四、浏览器
         </div>
-        <div class="re-content"></div>
+        <div class="re-content">
+            
+        </div>
           <div class="re-title">
            五、性能优化
         </div>
-        <div class="re-content"></div>
+        <div class="re-content">
+            <p>使用CDN</p>
+            <p>gzip压缩</p>
+            <p>文本压缩</p>
+            <p>合并请求</p>
+            <p>雪碧图</p>
+            <p>图片懒加载</p>
+            <p>缓存资源</p>
+            <p>减少DOM操作</p>
+        </div>
     </div>
 </template>
 <script>
