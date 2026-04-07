@@ -1,0 +1,193 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,figure,figcaption{
+    font-family: "微软雅黑","Microsoft YaHei","\u9ed1\u4f53","黑体","SimHei";
+    margin:0;padding:0;
+}
+/*strong{font-weight: normal;}*/
+img{border: none;vertical-align: middle;max-width: 100%;}
+html { height: 100%; width: 100%; outline: 0; -webkit-text-size-adjust:none;}
+input{outline: none;}
+input[type=radio]{-webkit-appearance: radio;} input[type=checkbox]{-webkit-appearance: checkbox;}
+a{text-decoration: none;color: #444444;}
+ul{list-style-type: none;margin: 0;padding: 0;}
+*{-webkit-tap-highlight-color: transparent; -webkit-appearance: none;}
+.clearfix:after{content:"";display:block;clear:both;overflow:hidden;visibility:visible;width:0;height:0;}
+.fl{float: left;}
+.fr{float: right;}
+.tm{text-align: center;}
+.tl{text-align: left;}
+.tr{text-align: right;}
+.inm{display: inline-block;vertical-align: middle;}
+.int{display: inline-block;vertical-align: top;}
+.inb{display: inline-block;vertical-align: bottom;}
+.tb{display: table-cell;width: 50%;}
+.relative{position: relative;}
+.ani{position: absolute}
+/* 经典版 */
+.clearfixd:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.flex-container {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-container-center {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container-left {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ellipsis {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.ellipsis-2{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.ellipsis-3{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.ellipsis-4{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.ellipsis-5{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+.ellipsis-6{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+
+
+body{
+    overflow:auto;/* winphone8和android4+ */
+    -webkit-overflow-scrolling: touch; /* ios5+ */
+}
+/*a:link,a:active,a:focus{color: #444;}*/
+.flexbox{
+    display: flex;
+    display: -webkit-flex;
+}
+button{
+    border: none;
+}
+
+/* 样式重置 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  html { height: 101%; }
+  body { font-size: 62.5%; line-height: 1; font-family: Arial, Tahoma, sans-serif; }
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+  ol, ul { list-style: none; }
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+  strong { font-weight: bold; } 
+  table { border-collapse: collapse; border-spacing: 0; }
+  img { border: 0; max-width: 100%; }
+  p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+  /* 典型的CSS清除浮动 */
+  .clearfix:after {
+    content: "."; 
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; 
+   }
+   .clearfix { display: inline-block; }
+   html[xmlns] .clearfix { display: block; }
+   * html .clearfix { height: 1%; }
+   /* 跨浏览器的透明 */
+   .transparent {
+    filter: alpha(opacity=50); /* internet explorer */
+    -khtml-opacity: 0.5;      /* khtml, old safari */
+    -moz-opacity: 0.5;       /* mozilla, netscape */
+    opacity: 0.5;           /* fx, safari, opera */
+}
+/* 通用媒体查询 */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-device-pixel-ratio:1.5) {
+  /* Styles */
+}
