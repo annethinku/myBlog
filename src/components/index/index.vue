@@ -11,7 +11,7 @@
         ref="banner"
       >
         <el-carousel-item v-for="(item,index) in 4" :key="index">
-          <img :src="'../../../static/images/'+(index+1)+'.jpg'" alt="logo" />
+          <img :src="'static/images/'+(index+1)+'.jpg'" alt="logo" />
           <div class="showContent" v-if="cindex==0">
             <div class="outFlex">
               <div class="flexbox">
