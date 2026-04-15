@@ -9,7 +9,7 @@
               You can’t have a better tomorrow if you don’t stop thinking about yesterday.
               <br />【老是想着过去是不会让你的未来变得更好的。】
             </div>
-            <el-button type="primary">READ MORE</el-button>
+            <el-button type="primary" @click="goLink('https://www.anyknew.com/#/')">READ MORE</el-button>
           </div>
         </el-carousel-item>
       </el-carousel>
@@ -25,7 +25,7 @@
             </div>
             <div class="yuanright">
               <div class="title">web程序媛心路历程总结</div>
-              <div class="des">目前就呆了两家公司，前任和现任。前任【北京九州申友教育咨询有限公司】，现任【汇亿诺嘉文化传播有限公司】，说说吧。。。</div>
+              <div class="des">目前就呆了四家公司，【北京九州申友教育咨询有限公司3】，【汇亿诺嘉文化传播有限公司1】，【方法数码科技有限公司1】，【志诚元创科技有限公司4】，说说吧。。。</div>
             </div>
           </div>
         </div>
@@ -282,9 +282,9 @@ export default {
       activeIndex: "1",
       activeIndex2: "1",
       banners: [
-        "../../../static/images/selfie.jpg",
-        "../../../static/images/travel2.jpg",
-        "../../../static/images/blog4.jpg"
+        "static/images/selfie.jpg",
+        "static/images/travel2.jpg",
+        "static/images/blog4.jpg"
       ],
       tags: [
         {
@@ -336,6 +336,9 @@ Mock.Random.image('200x100', '#ffcc33', '#FFF', 'png', '!')
     }
   },
   methods: {
+    goLink(url){
+      window.open(url);
+    },
     bannerChange(index) {
       if (index == 0) {
         this.bc = "bounceInDown";

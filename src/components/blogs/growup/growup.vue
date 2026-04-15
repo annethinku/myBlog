@@ -256,14 +256,8 @@
                 </p>
                 <div class="logo-box">
                   <div class="logo1">
-                    <img src="http://img.52z.com/upload/201707/27/1501121556251740.jpg" />
+                    <img src="static/img/logo-reddit.888d6d2.png" />
                   </div>
-                  <!-- <div class="logo2">
-                    <img src="http://img.52z.com/upload/201707/27/1501121556251740.jpg" />
-                  </div>
-                  <div class="logo-text">
-                    <img src="http://img.52z.com/upload/201707/27/1501121556251740.jpg" />
-                  </div>-->
                 </div>
                 <div class="mymove2">
                   <div class="mymove22"></div>
@@ -285,7 +279,7 @@
                       透明度opacity(.5) 亮色brightness(.5) 对比度contrast(2) 模糊blur(3px) 阴影drop-shadow(5px 5px 5px #000)
                       <div class="mybelow">
                         <img
-                          src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1569661894020&di=cd0df12ddc4162d7ed2b29e9ae7c0d10&imgtype=0&src=http%3A%2F%2Fclubimg.club.vmall.com%2Fdata%2Fattachment%2Fforum%2F201812%2F21%2F215626ci9yvgddppv53slw.jpg"
+                          src="static/img/logo-reddit.888d6d2.png"
                           alt="倒影图片"
                         />
                       </div>

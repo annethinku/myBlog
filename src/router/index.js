@@ -43,6 +43,11 @@ export default new Router({
           name: 'about',
           component: _import('blogs/about/about'),
         },
+         {
+          path: '/typescript',
+          name: 'typescript',
+          component: _import('blogs/typescript/typescript'),
+        },
         {
           path: '/result',
           name: 'result',

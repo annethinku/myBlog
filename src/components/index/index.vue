@@ -17,8 +17,8 @@
               <div class="flexbox">
                 <div class="sc-left">
                   <h2 :class="'animated'+(cindex==0?' fadeInLeft':'')">曾小蓉</h2>
-                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">爱追剧、爱王者、爱Money</p>
-                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">Web前端开发攻城狮 · ‘十分善良’的好人</p>
+                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">爱追剧、爱学习、爱Money</p>
+                  <p :class="'animated'+(cindex==0?' fadeInRight':'')">Web前端开发攻城狮 · 责任心十分强的人</p>
                   <router-link :to="{path:'/description'}">
                     <el-button
                       type="danger"
@@ -64,7 +64,7 @@
             <div class="outFlex">
               <div class="flexbox">
                 <div class="sc-left">
-                  <h2 :class="'animated'+(cindex==3?' fadeInLeft':'')">有钱旅行再说</h2>
+                  <h2 :class="'animated'+(cindex==3?' fadeInLeft':'')">成都、长沙、北海</h2>
                 </div>
               </div>
             </div>
